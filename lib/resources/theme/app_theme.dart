@@ -10,7 +10,6 @@ extension on ThemeData {
 ThemeData themeLight() => ThemeData(
     brightness: Brightness.light,
     primaryColor: ColorPalette.primaryL,
-    accentColor: ColorPalette.accentL,
     scaffoldBackgroundColor: ColorPalette.backgroundGray,
     cardColor: ColorPalette.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -29,12 +28,11 @@ ThemeData themeLight() => ThemeData(
         fontWeight: FontWeight.bold,
         color: ColorPalette.textGray,
       ),
-    )).setCommonThemeElements();
+    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorPalette.accentL)).setCommonThemeElements();
 
 ThemeData themeDark() => ThemeData(
     brightness: Brightness.dark,
     primaryColor: ColorPalette.primaryD,
-    accentColor: ColorPalette.accentD,
     scaffoldBackgroundColor: ColorPalette.primaryLightD,
     cardColor: ColorPalette.primaryDisabledD,
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -53,4 +51,4 @@ ThemeData themeDark() => ThemeData(
         fontWeight: FontWeight.bold,
         color: ColorPalette.white,
       ),
-    )).setCommonThemeElements();
+    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ColorPalette.accentD)).setCommonThemeElements();

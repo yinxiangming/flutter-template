@@ -57,7 +57,7 @@ void main() {
     userCredentialsStorage = CachedStorage<UserCredentials>(MemoryStorage());
     mockClient = MockClient(withMockClientHandler());
     chopperClient = ChopperClient(
-      baseUrl: 'http://example.com',
+      baseUrl: Uri.tryParse('http://example.com'),
       client: mockClient,
       converter: JsonTypeConverterProvider.getDefault(),
       interceptors: [

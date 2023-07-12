@@ -219,7 +219,7 @@ class _TaskListItem extends StatelessWidget {
       child: ListTile(
         leading: Checkbox(
             checkColor: ColorPalette.black,
-            activeColor: Theme.of(context).accentColor,
+            activeColor: Theme.of(context).colorScheme.secondary,
             value: task.status == TaskStatus.done,
             onChanged: (newState) => onStatusChange(task, newState!)),
         trailing: Icon(Icons.reorder),

@@ -39,7 +39,7 @@ class _SettingsThemeSwitchState extends State<SettingsThemeSwitch> {
               ),
             ),
             Switch.adaptive(
-              activeColor: Theme.of(context).accentColor,
+              activeColor: Theme.of(context).colorScheme.secondary,
               value: isDarkTheme,
               onChanged: (val) => toggleBrightness(context, val),
             ),

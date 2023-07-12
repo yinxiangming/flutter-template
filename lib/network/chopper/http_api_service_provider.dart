@@ -43,7 +43,7 @@ class HttpApiServiceProvider {
     forceUpdateHandler ??= ForceUpdateHandler();
 
     ChopperClient unauthorizedClient = ChopperClient(
-      baseUrl: baseUrl,
+      baseUrl: Uri.tryParse(baseUrl),
       client: httpClient,
       services: [
         ChopperUserAuthApiService.create(),
@@ -72,7 +72,7 @@ class HttpApiServiceProvider {
     );
 
     ChopperClient defaultClient = ChopperClient(
-      baseUrl: baseUrl,
+      baseUrl: Uri.tryParse(baseUrl),
       client: httpClient,
       services: [
         ChopperUserApiService.create(),
